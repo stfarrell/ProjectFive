@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A-Frame Solar System Lab</title>
+        <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+        
+    </head>
+    <body>
+        <a-scene  id="space">
+           <a-entity id="cameraWrapper" position="0 0 50">
+        <a-camera>
+            <a-cursor geometry="primitive: ring" material="color: #FFC0CB;    shader: flat"></a-cursor>
+        </a-camera>
+         <!--<a-animation attribute="rotation" dur="73000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>-->
+      </a-entity> 
+            <a-assets>
+                <img src="space.jpg" id="skyTexture">
+                <!--<img src="https://pixabay.com/get/eb37b00e2dfc083ed1534705fb0938c9bd22ffd41cb1114396f7c679a6/star-2211589_1920.jpg" id="skyTexture">-->
+            </a-assets>
+            <a-sky src="#skyTexture"></a-sky>
+          
+          <a-box>
+             <a-entity>
+            <a-sphere  id="Sun" position="0 0 0" src="sunmap.jpg" radius="10">
+                <a-animation attribute="rotation" dur="8000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-sphere>
+            <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-entity>
+          </a-box>
+            
+            
+        <a-entity>    
+            <a-sphere position="12 0 0" scr="mercuryMap.jpg" radius="0.383" id="Mercury">
+                <a-animation attribute="rotation" dur="352000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-sphere>
+            <a-animation attribute="rotation" dur="17600" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-entity>    
+            
+        <a-entity>    
+            <a-sphere position="16.9 0 0" src="venusMap.jpg" radius="0.949" id="Venus">
+                <a-animation attribute="rotation" dur="233600" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-sphere>
+            <a-animation attribute="rotation" dur="45000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-entity>
+        
+        <a-entity>
+            <a-sphere position="23.5 0 0" src="earthMap.jpg" radius="1" id="Earth">
+                <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-sphere>
+            <a-animation attribute="rotation" dur="73000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-entity>
+        
+        <a-entity>  
+            <a-sphere position="63.0 0 0" src="marsMap.jpg" radius="0.532" id="Mars">
+                <a-animation attribute="rotation" dur="59000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-sphere>
+            <a-animation attribute="rotation" dur="137400" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-entity>
+        
+        <a-entity>
+            <a-sphere position="122.1 0 0" src="jupiterMap.jpg" radius="11.21" id="Jupiter">
+                <a-animation attribute="rotation" dur="828" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-sphere>
+            <a-animation attribute="rotation" dur="876000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-entity>
+        
+        <a-entity>
+            <a-sphere position="250 0 0" src="saturnMap.jpg" radius="9.45" id="Saturn">
+                <a-animation attribute="rotation" dur="888" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-sphere>
+            <a-animation attribute="rotation" dur="2111200" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-entity>
+        
+        <a-entity>
+            <a-sphere position="450.3 0 0" src="uranusMap.jpg" radius="4.01" id="Uranus">
+                <a-animation attribute="rotation" dur="1436" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-sphere>
+            <a-animation attribute="rotation" dur="6132000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-entity>
+        
+        <a-entity>
+            <a-sphere position="705.5 0 0" src="neptuneMap.jpg" radius="3.88" id="Neptune">
+                <a-animation attribute="rotation" dur="1342" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-sphere>
+            <a-animation attribute="rotation" dur="12045000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-entity>    
+        <a-cursor geometry="primitive: ring" material="color: #FFC0CB;    shader: flat"></a-cursor>    
+            
+            
+            
+        <script src="solarsys.js"></script>    
+        </a-scene>
+        
+    </body>
+</html>
